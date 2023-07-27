@@ -1,0 +1,155 @@
+{
+  "quizQuestions": [
+    {
+      "category": "React",
+      "question": "What is React?",
+      "options": [
+        "A JavaScript framework for building user interfaces.",
+        "A programming language for web development.",
+        "A database management system.",
+        "An operating system for mobile devices."
+      ],
+      "answer": 0
+    },
+    {
+      "category": "React",
+      "question": "What is JSX in React?",
+      "options": [
+        "A programming language.",
+        "A file format for images.",
+        "A syntax extension for JavaScript used in React.",
+        "A package manager for Node.js."
+      ],
+      "answer": 2
+    },
+    {
+      "category": "JavaScript",
+      "question": "What is the output of the following code?\n\nconsole.log(2 + '2');",
+      "options": ["22", "4", "TypeError", "NaN"],
+      "answer": 0
+    },
+    {
+      "category": "JavaScript",
+      "question": "Which keyword is used to declare a variable in JavaScript with block scope?",
+      "options": ["var", "let", "const", "variable"],
+      "answer": 1
+    },
+    {
+      "category": "React",
+      "question": "How do you create a new React component using a function?",
+      "options": [
+        "class MyComponent extends React.Component {}",
+        "function MyComponent() {}",
+        "const MyComponent = () => {}",
+        "componentDidMount() {}"
+      ],
+      "answer": 2
+    },
+    {
+      "category": "React",
+      "question": "What is the purpose of state in React?",
+      "options": [
+        "To pass data from parent to child components.",
+        "To manage a component's internal data and handle changes.",
+        "To handle events in a React app.",
+        "To store static data in a React app."
+      ],
+      "answer": 1
+    },
+    {
+      "category": "React",
+      "question": "What is the purpose of 'key' prop in React when rendering a list of elements?",
+      "options": [
+        "To specify the index of each element in the list.",
+        "To uniquely identify each element in the list.",
+        "To define the order of elements in the list.",
+        "To create a custom attribute for each element in the list."
+      ],
+      "answer": 1
+    },
+    {
+      "category": "React",
+      "question": "What hook in React is used to perform side effects, such as data fetching?",
+      "options": ["useEffect", "useState", "useReducer", "useContext"],
+      "answer": 0
+    },
+    {
+      "category": "JavaScript",
+      "question": "What is the correct way to check if an element exists in an array?",
+      "options": [
+        "array.includes(element)",
+        "array.exists(element)",
+        "array.indexOf(element) !== -1",
+        "array.has(element)"
+      ],
+      "answer": 2
+    },
+    {
+      "category": "JavaScript",
+      "question": "Which built-in method can be used to convert a string to uppercase?",
+      "options": [
+        "toUpperCase()",
+        "upperCase()",
+        "toUppercase()",
+        "caseUpper()"
+      ],
+      "answer": 0
+    },
+    {
+      "category": "JavaScript",
+      "question": "Which of the following is NOT a valid way to declare a JavaScript function?",
+      "options": [
+        "function myFunction() {}",
+        "const myFunction = function() {}",
+        "const myFunction = () => {}",
+        "let myFunction = function() {}"
+      ],
+      "answer": 3
+    },
+    {
+      "category": "React",
+      "question": "What is the purpose of React Fragments?",
+      "options": [
+        "To group multiple components together.",
+        "To create elements with unique keys.",
+        "To define reusable styles in a React app.",
+        "To wrap child elements without adding extra nodes to the DOM."
+      ],
+      "answer": 3
+    },
+    {
+      "category": "React",
+      "question": "In React, how do you pass data from a parent component to a child component?",
+      "options": [
+        "Using the 'setState' method.",
+        "Using the 'props' attribute.",
+        "Using the 'state' attribute.",
+        "Using the 'getChildContext' method."
+      ],
+      "answer": 1
+    },
+    {
+      "category": "JavaScript",
+      "question": "What does the 'typeof' operator return when used on an array?",
+      "options": ["array", "object", "array", "function"],
+      "answer": 1
+    },
+    {
+      "category": "React",
+      "question": "What is the purpose of 'useReducer' hook in React?",
+      "options": [
+        "To handle side effects in a React app.",
+        "To manage and update state in a more complex way.",
+        "To fetch data from an external API.",
+        "To access the Redux store in a React app."
+      ],
+      "answer": 1
+    },
+    {
+      "category": "JavaScript",
+      "question": "What does the 'NaN' stand for in JavaScript?",
+      "options": ["Not a Node", "Now a Number", "Not a Null", "Not a Number"],
+      "answer": 3
+    }
+  ]
+}
