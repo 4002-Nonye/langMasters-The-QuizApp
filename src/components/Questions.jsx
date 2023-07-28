@@ -1,9 +1,22 @@
-import React from 'react'
+import React from "react";
+import Option from "./Option";
 
-const Questions = () => {
+const Questions = ({ questions }) => {
+  console.log(questions);
   return (
-    <div>Questions</div>
-  )
-}
+    <div className="questions-container">
+    {
+      questions.map((ques)=><h2>{ques.question}
 
-export default Questions
+      <ul>
+        {ques.options.map((opt)=><li>{opt}</li>)}
+      </ul>
+      
+      
+      </h2>)
+    }
+    </div>
+  );
+};
+
+export default Questions;
