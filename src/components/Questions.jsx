@@ -1,21 +1,29 @@
 import React from "react";
 import Option from "./Option";
 
-const Questions = ({ questions }) => {
+import Next from "./Next";
+
+const Questions = ({ questions, dispatch, pickedOption }) => {
   console.log(questions);
   return (
-    <div className="questions-container">
-    {
-      questions.map((ques)=><h2>{ques.question}
+    <>
+      <div className="questions-container">
+        <h2>{questions.question}</h2>
 
-      <ul>
-        {ques.options.map((opt)=><li>{opt}</li>)}
-      </ul>
+        <Option
+          options={questions.options}
+          pickedOption={pickedOption}
+          dispatch={dispatch}
+        />
+      </div>
+
+      <div className="btn-ui">
+      <p className="btn-next">5:00</p>
+        {pickedOption !== null && <Next dispatch={dispatch} />}
+
       
-      
-      </h2>)
-    }
-    </div>
+      </div>
+    </>
   );
 };
 
