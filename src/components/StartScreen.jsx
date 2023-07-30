@@ -4,7 +4,7 @@ import Button from "./Button";
 const StartScreen = ({ dispatch }) => {
   return (
     <div className="start-screen">
-      <h1>Quizzical</h1>
+      <h1>Lang Masters</h1>
       <p className="description">
         Test your knowledge on React and javaScript 👩🏻‍💻
       </p>

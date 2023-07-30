@@ -8,9 +8,17 @@ $color-theme: #1098ad;
 $color-medium: #ced4da;
 $color-dark: #495057;
 $color-light: #f1f3f5;
+$correct: #94D7A2;
+$wrong: #F8BCBC;
 $breakpoint-tablet: '768px';
 $breakpoint-mobile: '500px';
 
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+
+    flex-direction: $direction;
+}
 
 
 * {
@@ -37,22 +45,18 @@ button {
 }
 
 
-
 .app {
-    display: flex;
-    justify-content: center;
+    @include flexCenter(column);
     align-items: center;
-    flex-direction: column;
 
 }
 
 
 main {
-    display: flex;
-    justify-content: center;
+    @include flexCenter(column);
     width: 60rem;
-    flex-direction: column;
     margin-top: 5rem;
+
 
     @media screen and (max-width: $breakpoint-mobile) {
         width: 90%;
@@ -82,7 +86,7 @@ main {
     }
 
     ::-webkit-progress-value {
-        background-color: $color-theme;
+        background-color: $bg-button;
         border-radius: 100px;
     }
 
@@ -140,12 +144,39 @@ main {
 
     }
 
+    .result {
+        text-align: center;
+        @include flexCenter(column);
+        align-items: center;
+        height: 30rem;
+
+        h3 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        p{
+            font-size: 2rem;
+           
+        }
+
+        .restart {
+            margin-top: 3.5rem;
+            text-align: end;
+         
+        }
+    }
+    .res{
+        display: flex;
+        justify-content: end;
+     
+    }
+
+
+
 }
 
 .loader-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    @include flexCenter(column);
     align-items: center;
     margin-top: 2rem;
     gap: 1.6rem;
@@ -193,9 +224,7 @@ main {
     }
 
     .options {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        @include flexCenter(column);
         align-items: flex-start;
         width: 100%;
         margin-top: 2rem;
@@ -212,6 +241,27 @@ main {
 
         .answer {
             transform: translateX(2rem);
+            transition: 0.3s;
+            
+    @media screen and (max-width: $breakpoint-mobile) {
+        transform: translateX(1rem);
+    }
+        }
+
+        .btn {
+            background-color: #D6DBF5;
+            height: 8rem;
+
+            align-items: center;
+            display: flex;
+        }
+
+        .correct {
+            background-color: $correct ;
+        }
+
+        .wrong {
+            background-color: $wrong;
         }
 
         button {
@@ -219,16 +269,18 @@ main {
 
             font-weight: 600;
             font-size: 16px;
-            display: block;
             font-family: inherit;
             color: inherit;
             font-size: 2rem;
             border: 2px solid $bg-color;
-            background-color: #D6DBF5;
+
+
             padding: 2rem;
             border-radius: 100px;
             margin-top: 1.8rem;
             cursor: pointer;
+
+
 
 
             &:disabled:hover {
@@ -262,21 +314,23 @@ main {
     justify-content: space-between;
     margin-top: 3rem;
 
-    .btn-next {
-        background-color: $bg-button;
-        color: #F5F7FB;
-        outline: none;
-        border: 1px solid $bg-button;
-        padding: 1.5rem 3.5rem;
-        border-radius: 2.5rem;
-        font-size: 1.7rem;
-        transition: ease-in-out 500ms;
 
-        &:hover {
-            background-color: #F5F7FB;
-            color: $bg-button;
-            // border: $bg-button;
+}
 
-        }
+.btn-quiz {
+    background-color: $bg-button;
+    color: #F5F7FB;
+    outline: none;
+    border: 1px solid $bg-button;
+    padding: 1.5rem 3.5rem;
+    border-radius: 2.5rem;
+    font-size: 1.7rem;
+    transition: ease-in-out 500ms;
+
+    &:hover {
+        background-color: #F5F7FB;
+        color: $bg-button;
+        // border: $bg-button;
+
     }
 }

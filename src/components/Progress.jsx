@@ -1,15 +1,16 @@
 import React from "react";
 
-const Progress = ({index,totalQuestions}) => {
+const Progress = ({ index, totalQuestions, pickedOption,points,totalScore }) => {
+  
   return (
     <header className="progress">
-      <progress max={15} value={1} />
+      <progress max={totalQuestions} value={index + (pickedOption !== null)} />
 
       <p>
-        Question <strong>{index+1}</strong>/{totalQuestions}
+        Question <strong>{index + 1}</strong>/{totalQuestions}
       </p>
       <p>
-        <strong>{3}</strong>/{10}
+        <strong>{points}</strong>/{totalScore}
       </p>
     </header>
   );

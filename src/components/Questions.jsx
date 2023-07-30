@@ -1,10 +1,18 @@
 import React from "react";
 import Option from "./Option";
+import Timer from "./Timer";
 
 import Next from "./Next";
 
-const Questions = ({ questions, dispatch, pickedOption }) => {
-  console.log(questions);
+const Questions = ({
+  questions,
+  dispatch,
+  pickedOption,
+  index,
+  totalQuestions,
+  timeLeft
+}) => {
+ 
   return (
     <>
       <div className="questions-container">
@@ -14,14 +22,20 @@ const Questions = ({ questions, dispatch, pickedOption }) => {
           options={questions.options}
           pickedOption={pickedOption}
           dispatch={dispatch}
+          question={questions}
         />
       </div>
 
       <div className="btn-ui">
-      <p className="btn-next">5:00</p>
-        {pickedOption !== null && <Next dispatch={dispatch} />}
+        <Timer className="btn-quiz" timeLeft={timeLeft} dispatch={dispatch}/>
 
-      
+        {pickedOption !== null && (
+          <Next
+            dispatch={dispatch}
+            index={index}
+            totalQuestions={totalQuestions}
+          />
+        )}
       </div>
     </>
   );
